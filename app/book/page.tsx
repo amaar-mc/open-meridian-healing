@@ -42,7 +42,7 @@ export default function BookPage() {
         <div className="relative z-10 mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <ScrollReveal>
             <p className="text-terracotta text-sm font-medium tracking-[0.2em] uppercase mb-6">
-              🌿 Schedule
+              <img src="/images/logo.png" alt="" width={18} height={18} className="inline-block mr-1.5 align-middle" />Schedule
             </p>
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-light text-bark leading-tight">
               Book Your Session

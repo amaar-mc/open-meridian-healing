@@ -6,7 +6,7 @@ export default function PrivacyPage() {
       <article className="mx-auto max-w-3xl px-6 lg:px-8">
         <header className="mb-12">
           <p className="text-sage text-sm font-medium tracking-widest uppercase mb-4">
-            🌿 Open Meridian Healing
+            <img src="/images/logo.png" alt="" width={18} height={18} className="inline-block mr-1.5 align-middle" />Open Meridian Healing
           </p>
           <h1 className="font-heading text-4xl md:text-5xl font-light text-bark leading-tight">
             Privacy Policy

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui";
@@ -67,7 +68,7 @@ export function VideoHero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex items-center gap-3 mb-8"
             >
-              <span className="text-base">🌿</span>
+              <Image src="/images/logo.png" alt="" width={22} height={22} />
               <span className="text-terracotta text-xs font-semibold tracking-[0.28em] uppercase">
                 Open Meridian Healing
               </span>

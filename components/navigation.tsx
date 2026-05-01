@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
@@ -58,9 +59,13 @@ export function Navigation() {
         <nav className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             <Link href="/" className="flex items-center gap-2.5 group">
-              <span className="text-xl transition-transform duration-300 group-hover:rotate-12">
-                🌿
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="Open Meridian Healing logo"
+                width={36}
+                height={36}
+                className="transition-transform duration-300 group-hover:scale-110"
+              />
               <span className="font-heading text-xl font-semibold text-bark tracking-wide">
                 Open Meridian
               </span>

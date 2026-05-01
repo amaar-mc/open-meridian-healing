@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 type ButtonVariant = "primary" | "secondary" | "outline";
@@ -89,7 +90,7 @@ export function Divider({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center justify-center gap-3 py-2 ${className}`}>
       <div className="h-px w-12 bg-terracotta/20" />
-      <span className="text-sage text-sm">🌿</span>
+      <Image src="/images/logo.png" alt="" width={20} height={20} />
       <div className="h-px w-12 bg-terracotta/20" />
     </div>
   );
