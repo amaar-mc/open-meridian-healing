@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { Fragment } from "react";
 import { motion, useInView } from "framer-motion";
 
 type BlurTextProps = {
@@ -12,7 +13,7 @@ type BlurTextProps = {
   as?: "h1" | "h2" | "h3" | "p" | "span";
 };
 
-/** Character-by-character blur reveal — for large headings */
+/** Character-by-character blur reveal — words never break mid-character */
 export function BlurText({
   text,
   className = "",
@@ -24,25 +25,46 @@ export function BlurText({
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref as React.RefObject<HTMLElement>, { once, margin: "-60px" });
 
+  const words = text.split(" ");
+
   return (
     // @ts-expect-error polymorphic ref
     <Tag ref={ref} className={className} aria-label={text}>
-      {text.split("").map((char, i) => (
-        <motion.span
-          key={i}
-          initial={{ opacity: 0, filter: "blur(10px)" }}
-          animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{
-            duration: 0.55,
-            delay: delay + i * charDelay,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-          className="inline-block"
-          style={{ whiteSpace: char === " " ? "pre" : undefined }}
-        >
-          {char === " " ? " " : char}
-        </motion.span>
-      ))}
+      {words.map((word, wordIdx) => {
+        const charsBefore = words.slice(0, wordIdx).join("").length + wordIdx;
+        return (
+          <Fragment key={wordIdx}>
+            {wordIdx > 0 && (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.3, delay: delay + charsBefore * charDelay }}
+                style={{ whiteSpace: "pre" }}
+                className="inline-block"
+              >
+                {" "}
+              </motion.span>
+            )}
+            <span className="inline-block whitespace-nowrap">
+              {word.split("").map((char, charIdx) => (
+                <motion.span
+                  key={charIdx}
+                  initial={{ opacity: 0, filter: "blur(10px)" }}
+                  animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
+                  transition={{
+                    duration: 0.55,
+                    delay: delay + (charsBefore + charIdx) * charDelay,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </span>
+          </Fragment>
+        );
+      })}
     </Tag>
   );
 }

@@ -153,11 +153,8 @@ export function HomeContent() {
                   wordDelay={0.04}
                 />
               </div>
-              <BlurReveal delay={1.1} className="mt-8 flex flex-wrap gap-4">
-                <Button href="/book#discovery">Book a Discovery Call</Button>
-                <Button href="/book" variant="outline">
-                  Schedule a Session
-                </Button>
+              <BlurReveal delay={0.9} className="mt-8">
+                <Button href="/services">Explore Services →</Button>
               </BlurReveal>
             </div>
           </div>
@@ -167,13 +164,13 @@ export function HomeContent() {
       {/* Stats — animated numbers */}
       <section className="py-16 bg-linen/50">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-8 divide-x divide-sage/15">
+          <div className="grid grid-cols-3 gap-4 divide-x divide-sage/15">
             {STATS.map((stat, i) => (
-              <BlurReveal key={stat.label} delay={i * 0.15} className="text-center px-4">
-                <p className="font-heading text-4xl md:text-5xl text-bark font-light">
+              <BlurReveal key={stat.label} delay={i * 0.15} className="text-center px-2 sm:px-4">
+                <p className="font-heading text-2xl sm:text-4xl md:text-5xl text-bark font-light">
                   <AnimatedNumber value={stat.value} suffix={stat.suffix} duration={1.4} />
                 </p>
-                <p className="mt-2 text-xs text-earth/50 leading-snug max-w-[120px] mx-auto">
+                <p className="mt-2 text-[10px] sm:text-xs text-earth/50 leading-snug max-w-[90px] sm:max-w-[120px] mx-auto">
                   {stat.label}
                 </p>
               </BlurReveal>
@@ -206,7 +203,7 @@ export function HomeContent() {
             />
           </div>
 
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5" stagger={0.1}>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5" stagger={0.1}>
             {SUPPORT_AREAS.map((area) => (
               <StaggerItem key={area.title}>
                 <div className="group rounded-2xl bg-white/60 backdrop-blur-sm border border-sage/10 p-5 lg:p-6 hover:shadow-lg hover:shadow-sage/5 transition-all duration-500 h-full">

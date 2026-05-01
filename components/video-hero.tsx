@@ -56,17 +56,17 @@ export function VideoHero() {
       <div className="absolute bottom-[15%] left-[5%] w-[400px] h-[400px] rounded-full bg-terracotta/8 blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full py-28 lg:py-0">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full py-16 lg:py-0">
 
           {/* Text side */}
-          <div className="lg:col-span-7 order-2 lg:order-1">
+          <div className="lg:col-span-7 order-1 text-center lg:text-left">
 
             {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex items-center gap-3 mb-8"
+              className="flex items-center justify-center lg:justify-start gap-3 mb-8"
             >
               <Image src="/images/logo.png" alt="" width={22} height={22} />
               <span className="text-terracotta text-xs font-semibold tracking-[0.28em] uppercase">
@@ -75,7 +75,7 @@ export function VideoHero() {
             </motion.div>
 
             {/* Main heading — char-by-char blur */}
-            <h1 className="font-heading text-[3.2rem] md:text-[4.2rem] lg:text-[5rem] xl:text-[5.5rem] font-light text-bark leading-[1.08] tracking-[-0.02em]">
+            <h1 className="font-heading text-[2.2rem] sm:text-[3.2rem] md:text-[4.2rem] lg:text-[5rem] xl:text-[5.5rem] font-light text-bark leading-[1.08] tracking-[-0.02em]">
               {"Ease into inner".split("").map((char, i) => (
                 <motion.span
                   key={`line1-${i}`}
@@ -143,7 +143,7 @@ export function VideoHero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.8 }}
-              className="mt-10 flex flex-wrap items-center gap-4"
+              className="mt-8 flex flex-col sm:flex-row items-center lg:items-start gap-3"
             >
               <Button href="/book#discovery" variant="primary">
                 Book a Discovery Call
@@ -169,11 +169,11 @@ export function VideoHero() {
             initial={{ opacity: 0, scale: 0.94, y: 24 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1.3, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-center"
+            className="lg:col-span-5 order-2 flex justify-center"
           >
             <div className="relative">
               <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-terracotta/10 via-sand/30 to-sage-muted/15 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl shadow-bark/8 w-[280px] sm:w-[320px] lg:w-[360px] aspect-[9/16]">
+              <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl shadow-bark/8 w-[220px] sm:w-[280px] lg:w-[360px] aspect-[9/16]">
                 <video
                   ref={videoRef}
                   src="/video/reiki-session.mp4"

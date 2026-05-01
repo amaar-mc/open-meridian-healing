@@ -24,10 +24,10 @@ function CalendlyEmbed() {
       <iframe
         src="https://calendly.com/openmeridianhealing/15min"
         width="100%"
-        height="700"
+        height="660"
         frameBorder="0"
         title="Schedule a session with Open Meridian Healing"
-        className="w-full block"
+        className="w-full block min-h-[520px]"
         loading="lazy"
       />
     </div>
@@ -73,13 +73,13 @@ export default function BookPage() {
                   discuss what you&apos;re seeking, and determine the most
                   aligned next step.
                 </p>
-                <div className="flex items-center justify-center gap-4 mt-4 text-sm text-earth/50">
+                <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mt-4 text-sm text-earth/50">
                   <span className="flex items-center gap-1">
                     <Clock size={14} /> 15 minutes
                   </span>
-                  <span>·</span>
+                  <span className="hidden sm:inline">·</span>
                   <span>Complimentary</span>
-                  <span>·</span>
+                  <span className="hidden sm:inline">·</span>
                   <span className="flex items-center gap-1">
                     <Phone size={14} /> Phone or
                     <Video size={14} className="ml-1" /> Zoom
@@ -87,7 +87,7 @@ export default function BookPage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div>
                   <h3 className="font-heading text-xl text-bark font-medium mb-4">
                     Required For

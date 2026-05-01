@@ -108,69 +108,13 @@ export default function AboutPage() {
                 Healing begins with openness.
               </p>
               <p>
-                Life exists in a constant movement of energy. This flow of life
-                force energy moves through the physical body and extends beyond
-                it into the surrounding energetic field—often referred to as the
-                biometric field or the aura. This energetic system is responsive,
-                dynamic, and deeply connected to our overall sense of well-being.
+                Life force energy moves through and beyond the physical body into an energetic field. Injury, emotional pain, prolonged stress, or trauma can interrupt this flow — experienced over time as imbalance, fatigue, or disconnection. Reiki gently supports the reorganization of this energy, without direction or control, allowing it to move where it is needed.
               </p>
               <p>
-                Life experiences such as physical injury, emotional pain,
-                prolonged stress, or trauma can interrupt the natural continuity
-                of this flow. Over time, these interruptions may be experienced
-                as imbalance, fatigue, or a sense of disconnection within
-                oneself. Reiki offers a gentle way to support the reorganization
-                of energy, inviting greater mind–heart coherence and ease.
-              </p>
-              <p>
-                At Open Meridian Healing, Reiki is understood as a practice
-                rooted in love, wisdom, intuition, and universal intelligence.
-                Reiki carries its own innate knowing and does not require
-                direction or control. Through the practice of Reiki, the
-                practitioner consciously opens to the flow of this energy,
-                allowing it to move where it is needed.
-              </p>
-              <p>
-                Channeling Reiki supports the realignment and continuity of
-                energy throughout the body, its meridians, and the surrounding
-                biofield. As this flow becomes more consistent, areas of
-                congestion or interruption can begin to soften and clear,
-                allowing the body to engage more fully with its own restorative
-                processes.
-              </p>
-
-              <div className="my-12 rounded-2xl bg-sage/8 border border-sage/15 p-8 lg:p-10">
-                <p className="text-bark/80 leading-relaxed">
-                  People relate to Reiki through many perspectives. Some
-                  experience it as a spiritual practice rooted in love and inner
-                  awareness. Others understand it through the language of
-                  electromagnetic fields, energy frequency, or principles
-                  reflected in quantum physics. No single belief system is
-                  required.{" "}
-                  <span className="font-medium text-bark">
-                    Reiki meets each person within the framework that resonates
-                    most naturally for them.
-                  </span>
-                </p>
-              </div>
-
-              <p>
-                One of the most beautiful aspects of Reiki is its universality.
-                Reiki is available to everyone, regardless of belief,
-                nationality, social status, body size, race, religion, sexual
-                orientation, gender identity, or cultural background. It is
-                offered in service of balance, harmony, and the highest good of
-                all.
-              </p>
-              <p>
-                Sessions are guided by presence, attentiveness, intuition, and
-                respect. Each session is approached as a collaborative
-                process—one that honors your experience and allows healing to
-                emerge as the mind and body open to receive life force energy.
+                Reiki is available to everyone, regardless of belief, background, or experience. It is offered in service of balance, harmony, and the highest good.
               </p>
               <p className="font-heading text-2xl text-bark/70 italic font-light">
-                From this place, wholeness becomes more accessible as a natural
-                state of remembrance.
+                From this place, wholeness becomes more accessible.
               </p>
             </div>
           </ScrollReveal>
@@ -208,23 +152,23 @@ export default function AboutPage() {
 
               <div className="space-y-5 text-earth/70 leading-relaxed">
                 <p>
-                  Reiki is not just a practice I offer. It is a calling and a contribution I feel deeply drawn to make in the world.
+                  Reiki is not just a practice I offer. It is a calling I feel deeply drawn to make in the world.
                 </p>
                 <p>
-                  My journey with energy healing began in 2020, during a period of profound self-awareness. I started to recognize how deeply past trauma was affecting my emotional responses, my physical health, and the way I moved through life. I was often reactive, emotionally overwhelmed, and living in a constant state of fight-or-flight. I knew something needed to change, not only so I could feel better, but so I could live with greater clarity, presence, and intention.
+                  My journey began in 2020, when I recognized how deeply past trauma was affecting my emotional responses, my physical health, and the way I moved through life. Reactive, overwhelmed, and living in a constant state of fight-or-flight, I knew something needed to change.
                 </p>
                 <p>
-                  Through energy healing, I began learning how to ground myself and regulate my nervous system. As my body and mind found greater balance, my capacity to make healthier decisions expanded. Since beginning this work, I have lost over 62 pounds and feel more balanced and healthier than I ever have. During my own healing process, I discovered Reiki and experienced firsthand its power.
+                  Through energy healing, I learned to ground myself and regulate my nervous system. Since beginning this work, I have lost over 62 pounds and feel more balanced and healthier than I ever have. It was during this process that I discovered Reiki and experienced firsthand its power.
                 </p>
                 <p>
-                  I believe healing is not one-size-fits-all. My intention is to make this work accessible and personal, honoring wherever you are in your journey. It is an honor to walk alongside others as they reconnect with their own capacity for healing, balance, and inner clarity.
+                  Healing is not one-size-fits-all. My intention is to make this work accessible and personal, honoring wherever you are in your journey.
                 </p>
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4">
                 <Button href="/book#discovery">Book a Discovery Call</Button>
                 <Button href="/book" variant="outline" small>
-                  Returning Clients: Schedule a Session
+                  Returning Clients: Schedule
                 </Button>
               </div>
             </ScrollReveal>
