@@ -97,7 +97,7 @@ export default function WhatToExpectPage() {
       </section>
 
       {/* How Reiki Is Experienced */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image — the session room again, different crop/frame */}
@@ -166,7 +166,7 @@ export default function WhatToExpectPage() {
       </section>
 
       {/* Journey Steps */}
-      <section className="py-24 lg:py-32 bg-warm-white">
+      <section className="py-16 lg:py-20 bg-warm-white">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <ScrollReveal>
             <SectionHeading
@@ -237,7 +237,7 @@ export default function WhatToExpectPage() {
       </section>
 
       {/* Autonomy & Reminder */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center">
