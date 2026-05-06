@@ -67,8 +67,8 @@ export function Navigation() {
                 height={36}
                 className="transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="font-heading text-xl font-semibold text-bark tracking-wide">
-                Open Meridian
+              <span className="font-brand text-lg font-normal text-honey tracking-wide">
+                Open Meridian Healing
               </span>
             </Link>
 
