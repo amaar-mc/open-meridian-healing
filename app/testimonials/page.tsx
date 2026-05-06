@@ -58,7 +58,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Testimonial cards */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <StaggerContainer className="space-y-12" stagger={0.15}>
             {TESTIMONIALS.map((t) => (
@@ -128,10 +128,7 @@ export default function TestimonialsPage() {
               New clients begin with a complimentary 15-minute discovery call.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/book#discovery">Book a Discovery Call</Button>
-              <Button href="/book" variant="outline" small>
-                Returning Clients: Schedule
-              </Button>
+              <Button href="/book#discovery">Book your Discovery Call</Button>
             </div>
           </ScrollReveal>
         </div>
