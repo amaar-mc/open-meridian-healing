@@ -123,7 +123,7 @@ export function VideoHero() {
 
             {/* Subtext — word blur */}
             <div className="mt-8 text-bark-light/70 text-lg leading-relaxed max-w-xl">
-              {"Reiki and intuitive energy healing in a warm, grounded space—inviting calm, heart-centered presence, and a gentle return to wholeness."
+              {"Reiki and intuitive energy healing offered in a warm, grounded, and supportive space—inviting calm, heart-centered presence, and a gentle return to wholeness."
                 .split(" ")
                 .map((word, i) => (
                   <motion.span
@@ -146,10 +146,7 @@ export function VideoHero() {
               className="mt-8 flex flex-col sm:flex-row items-center lg:items-start gap-3"
             >
               <Button href="/book#discovery" variant="primary">
-                Book a Discovery Call
-              </Button>
-              <Button href="/book" variant="outline">
-                Schedule a Session
+                Book your Discovery Call
               </Button>
             </motion.div>
 
