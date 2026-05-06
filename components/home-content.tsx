@@ -104,7 +104,6 @@ const SERVICES = [
 ] as const;
 
 const STATS = [
-  { value: 62, suffix: " lbs", label: "Lost by founder through energy healing" },
   { value: 5, suffix: "+", label: "Distinct offerings to meet you where you are" },
   { value: 15, suffix: " min", label: "Complimentary discovery call to begin" },
 ] as const;
@@ -116,9 +115,9 @@ export function HomeContent() {
       <LotusScroll />
 
       {/* What is Reiki */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal variant="slideLeft">
               <div className="relative">
                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl shadow-bark/8">
@@ -148,9 +147,14 @@ export function HomeContent() {
               />
               <div className="space-y-5 text-earth/70 leading-relaxed">
                 <BlurWords
-                  text="Reiki is a gentle practice that works with universal life force energy through light touch or hands held above the body. It helps the nervous system settle and supports the body's return to balance."
+                  text="When stress, emotions, or life experiences build up, the body can hold that tension—leaving you feeling heavy, unsettled, or out of balance. Open Meridian Healing offers Reiki as a grounded, heart-centered practice supporting a return to clarity, calm, and wholeness."
                   delay={0.3}
                   wordDelay={0.04}
+                />
+                <BlurWords
+                  text="Reiki is a complementary wellness practice that works with universal life force energy. It is offered through light touch or hands held just above the body. Reiki invites the nervous system to settle, supports energetic flow through the body and its meridians, and helps the mind and body return to a more coherent state of balance."
+                  delay={0.5}
+                  wordDelay={0.03}
                 />
               </div>
               <BlurReveal delay={0.9} className="mt-8">
@@ -162,9 +166,9 @@ export function HomeContent() {
       </section>
 
       {/* Stats — animated numbers */}
-      <section className="py-16 bg-linen/50">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-4 divide-x divide-sage/15">
+      <section className="py-10 bg-linen/50">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="grid grid-cols-2 gap-4 divide-x divide-sage/15">
             {STATS.map((stat, i) => (
               <BlurReveal key={stat.label} delay={i * 0.15} className="text-center px-2 sm:px-4">
                 <p className="font-heading text-2xl sm:text-4xl md:text-5xl text-bark font-light">
@@ -180,16 +184,16 @@ export function HomeContent() {
       </section>
 
       {/* Divider */}
-      <div className="flex items-center justify-center py-10 bg-cream">
+      <div className="flex items-center justify-center py-6 bg-cream">
         <div className="h-px w-24 bg-sage/20" />
         <span className="mx-4 text-sage/40 text-xl">✦</span>
         <div className="h-px w-24 bg-sage/20" />
       </div>
 
       {/* How Reiki Supports You */}
-      <section className="py-16 lg:py-20 bg-gradient-to-b from-cream to-warm-white">
+      <section className="py-12 lg:py-16 bg-gradient-to-b from-cream to-warm-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <BlurReveal delay={0.1}>
               <p className="text-terracotta text-xs font-semibold tracking-[0.22em] uppercase mb-3">
                 Holistic Wellness
@@ -200,6 +204,12 @@ export function HomeContent() {
               className="font-heading text-3xl md:text-4xl font-light text-bark leading-tight block"
               delay={0.2}
               charDelay={0.02}
+            />
+            <BlurWords
+              text="Reiki is a gentle, supportive practice that helps the body and mind settle into a more balanced, regulated state—guided by your own inner wisdom. Each experience is unique, with support across physical, emotional, mental, and spiritual well-being."
+              className="mt-4 text-earth/60 max-w-2xl mx-auto leading-relaxed"
+              delay={0.4}
+              wordDelay={0.03}
             />
           </div>
 
@@ -229,7 +239,7 @@ export function HomeContent() {
       </section>
 
       {/* Services */}
-      <section className="py-24 lg:py-32 bg-warm-white">
+      <section className="py-16 lg:py-20 bg-warm-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <BlurReveal delay={0.1}>
@@ -270,14 +280,14 @@ export function HomeContent() {
         </div>
       </section>
 
-      <div className="flex items-center justify-center py-10 bg-warm-white">
+      <div className="flex items-center justify-center py-6 bg-warm-white">
         <div className="h-px w-24 bg-sage/20" />
         <span className="mx-4 text-sage/40 text-xl">✦</span>
         <div className="h-px w-24 bg-sage/20" />
       </div>
 
       {/* Invitation / CTA — dark section */}
-      <section className="relative py-28 lg:py-36 overflow-hidden">
+      <section className="relative py-20 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,#2A1F18_0%,#1A1512_70%,#0F0C0A_100%)]" />
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-sage blur-3xl" />
@@ -304,15 +314,7 @@ export function HomeContent() {
 
           <BlurReveal delay={1.1} className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button href="/book#discovery">
-              Book a Discovery Call
-            </Button>
-            <Button
-              href="/book"
-              variant="outline"
-              className="border-cream/30 text-cream hover:bg-cream/10 hover:text-cream hover:border-cream/50"
-              small
-            >
-              Returning Clients: Schedule a Session
+              Book your Discovery Call
             </Button>
           </BlurReveal>
           <BlurReveal delay={1.3}>
