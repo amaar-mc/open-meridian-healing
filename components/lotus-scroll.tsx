@@ -3,35 +3,43 @@
 import { useRef, useEffect, useCallback, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const PHASES = [
+const PHASES: {
+  range: [number, number, number, number];
+  text: string;
+  subtext?: string;
+  position: string;
+  align: string;
+  style: string;
+}[] = [
   {
-    range: [0, 0.1, 0.28, 0.4] as [number, number, number, number],
+    range: [0, 0.1, 0.28, 0.4],
     text: "Something within is asking for care.",
+    subtext: "You don’t have to carry it alone.",
     position: "bottom-[20%]",
     align: "text-center",
     style: "font-heading text-2xl md:text-3xl lg:text-4xl text-bark/55 italic",
   },
   {
-    range: [0.38, 0.52, 0.65, 0.75] as [number, number, number, number],
+    range: [0.38, 0.52, 0.65, 0.75],
     text: "Reiki meets you exactly where you are.",
     position: "top-[22%]",
     align: "text-center",
     style: "font-heading text-2xl md:text-3xl lg:text-4xl text-sage-dark/60 italic",
   },
   {
-    range: [0.72, 0.83, 0.95, 1.0] as [number, number, number, number],
+    range: [0.72, 0.83, 0.95, 1.0],
     text: "This is the beginning.",
     position: "bottom-[18%]",
     align: "text-center",
     style: "font-heading text-3xl md:text-4xl lg:text-5xl text-terracotta/70 italic",
   },
-] as const;
+];
 
 function PhaseText({
   phase,
   scrollYProgress,
 }: {
-  phase: (typeof PHASES)[number];
+  phase: typeof PHASES[number];
   scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"];
 }) {
   const [enter, clearIn, holdEnd, exit] = phase.range;
@@ -46,6 +54,9 @@ function PhaseText({
       className={`absolute left-0 right-0 px-8 ${phase.position} ${phase.align} pointer-events-none`}
     >
       <p className={phase.style}>{phase.text}</p>
+      {phase.subtext && (
+        <p className={`${phase.style} mt-2 opacity-80`}>{phase.subtext}</p>
+      )}
     </motion.div>
   );
 }
