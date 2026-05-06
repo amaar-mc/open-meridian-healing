@@ -22,6 +22,11 @@
 
   --font-heading: var(--font-cormorant);
   --font-body: var(--font-dm-sans);
+  --font-brand: var(--font-cinzel-decorative);
+}
+
+.font-brand {
+  font-family: var(--font-brand);
 }
 
 html {
