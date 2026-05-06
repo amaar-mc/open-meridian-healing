@@ -155,7 +155,7 @@ export default function BookPage() {
       <Divider />
 
       {/* Henna & In-Home */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollReveal variant="slideLeft">

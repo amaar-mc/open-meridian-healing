@@ -155,7 +155,7 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Items */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <div className="space-y-4">
             {FAQS.map((faq, i) => (
@@ -180,7 +180,7 @@ export default function FAQPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button href="/contact">Contact Us</Button>
                 <Button href="/book#discovery" variant="outline">
-                  Book a Discovery Call
+                  Book your Discovery Call
                 </Button>
               </div>
             </div>
