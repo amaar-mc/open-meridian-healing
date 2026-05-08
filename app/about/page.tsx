@@ -35,7 +35,7 @@ export default function AboutPage() {
               delay={0.5}
               wordDelay={0.05}
             />
-            <p className="mt-6 font-heading text-2xl italic text-sage-dark">
+            <p className="mt-6 font-heading text-2xl italic text-[#3F5A3F]">
               &ldquo;Reiki supports what is ready to unfold.&rdquo;
             </p>
           </ScrollReveal>
