@@ -32,6 +32,7 @@ export function Footer() {
                 alt="Open Meridian Healing logo"
                 width={56}
                 height={56}
+                className="w-14 h-14"
               />
               <span className="font-brand text-2xl font-normal text-honey tracking-wide">
                 Open Meridian Healing

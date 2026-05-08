@@ -63,7 +63,7 @@ export function Navigation() {
                 alt="Open Meridian Healing logo"
                 width={32}
                 height={32}
-                className="shrink-0 transition-transform duration-300 group-hover:scale-110"
+                className="shrink-0 w-8 h-8 transition-transform duration-300 group-hover:scale-110"
               />
               <span className="font-brand text-[13px] sm:text-base lg:text-lg font-normal text-honey tracking-wide leading-none truncate">
                 Open Meridian Healing

@@ -90,7 +90,7 @@ export function Divider({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center justify-center gap-4 py-2 ${className}`}>
       <div className="h-px w-16 bg-terracotta/20" />
-      <Image src="/images/logo.png" alt="" width={44} height={44} />
+      <Image src="/images/logo.png" alt="" width={44} height={44} className="w-11 h-11" />
       <div className="h-px w-16 bg-terracotta/20" />
     </div>
   );

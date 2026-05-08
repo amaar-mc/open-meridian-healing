@@ -74,6 +74,7 @@ export function VideoHero() {
                 width={84}
                 height={84}
                 priority
+                className="w-[84px] h-[84px]"
               />
               <span className="hidden lg:inline-block font-brand text-xl sm:text-2xl text-honey tracking-wide leading-none">
                 Open Meridian Healing
