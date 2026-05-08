@@ -43,7 +43,7 @@ export default function AboutPage() {
       </section>
 
       {/* How Reiki Is Experienced */}
-      <section className="py-16 lg:py-20 bg-cream">
+      <section className="py-10 lg:py-14 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal variant="slideLeft">
@@ -92,7 +92,7 @@ export default function AboutPage() {
       </section>
 
       {/* About Open Meridian Healing */}
-      <section className="py-16 lg:py-20 bg-warm-white">
+      <section className="py-10 lg:py-14 bg-warm-white">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <ScrollReveal>
             <Divider className="mb-8" />
@@ -122,7 +122,7 @@ export default function AboutPage() {
       </section>
 
       {/* Practitioner Bio */}
-      <section className="py-16 lg:py-20 bg-cream">
+      <section className="py-10 lg:py-14 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
             <ScrollReveal variant="slideLeft" className="lg:col-span-2">
