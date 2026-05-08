@@ -7,11 +7,9 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/what-to-expect", label: "What to Expect" },
-  { href: "/book", label: "Book Now" },
   { href: "/faq", label: "FAQ" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/contact", label: "Contact" },
@@ -72,12 +70,12 @@ export function Navigation() {
               </span>
             </Link>
 
-            <div className="hidden lg:flex items-center gap-7">
+            <div className="hidden lg:flex items-center gap-5 xl:gap-6">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group relative text-sm font-medium text-bark-light/70 hover:text-bark transition-colors duration-300 py-1"
+                  className="group relative text-[13px] font-medium text-bark-light/70 hover:text-bark transition-colors duration-300 py-1 whitespace-nowrap"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-terracotta transition-all duration-300 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover:w-1/2" />
@@ -85,10 +83,10 @@ export function Navigation() {
                 </Link>
               ))}
               <Link
-                href="/book"
-                className="ml-3 rounded-full bg-terracotta px-6 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-terracotta-light hover:shadow-lg hover:shadow-terracotta/15 hover:scale-[1.03] active:scale-[0.97]"
+                href="/book#discovery"
+                className="ml-2 rounded-full bg-terracotta px-5 py-2 text-[13px] font-medium text-white whitespace-nowrap transition-all duration-300 hover:bg-terracotta-light hover:shadow-lg hover:shadow-terracotta/15 hover:scale-[1.03] active:scale-[0.97]"
               >
-                Book a Session
+                Book your Discovery Call
               </Link>
             </div>
 
@@ -144,11 +142,11 @@ export function Navigation() {
                 </div>
                 <div className="mt-auto">
                   <Link
-                    href="/book"
+                    href="/book#discovery"
                     onClick={() => setMobileOpen(false)}
                     className="block w-full text-center rounded-full bg-terracotta px-6 py-3.5 text-base font-medium text-white hover:bg-terracotta-light transition-colors"
                   >
-                    Book a Session
+                    Book your Discovery Call
                   </Link>
                 </div>
               </div>
