@@ -267,7 +267,7 @@ export default function WhatToExpectPage() {
 
           <ScrollReveal delay={0.3}>
             <div className="mt-10 text-center">
-              <Button href="/book">Book a Session</Button>
+              <Button href="/book#discovery">Book your Discovery Call</Button>
             </div>
           </ScrollReveal>
         </div>
