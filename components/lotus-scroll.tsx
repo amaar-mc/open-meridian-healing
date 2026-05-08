@@ -199,7 +199,7 @@ export function LotusScroll() {
   const videoOpacity = useTransform(scrollYProgress, [0, 0.08, 0.92, 1], [0, 1, 1, 0.6]);
 
   return (
-    <div ref={containerRef} className="relative h-[200vh]">
+    <div ref={containerRef} className="relative h-[140vh]">
       <div className="sticky top-0 h-screen overflow-hidden bg-cream flex items-center justify-center">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="w-[500px] h-[500px] rounded-full bg-sage-muted/15 blur-[80px]" />
