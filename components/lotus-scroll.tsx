@@ -15,7 +15,7 @@ const PHASES: {
     range: [0, 0.1, 0.28, 0.4],
     text: "Something within is asking for care.",
     subtext: "You don’t have to carry it alone.",
-    position: "bottom-[18%] lg:bottom-[20%]",
+    position: "bottom-[30%] lg:bottom-[20%]",
     align: "text-center",
     style: "font-heading text-[1.6rem] md:text-3xl lg:text-4xl text-bark/55 italic",
   },
