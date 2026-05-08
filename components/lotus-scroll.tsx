@@ -15,7 +15,7 @@ const PHASES: {
     range: [0, 0.1, 0.28, 0.4],
     text: "Something within is asking for care.",
     subtext: "You don’t have to carry it alone.",
-    position: "bottom-[20%]",
+    position: "bottom-[32%] lg:bottom-[20%]",
     align: "text-center",
     style: "font-heading text-2xl md:text-3xl lg:text-4xl text-bark/55 italic",
   },
@@ -200,7 +200,7 @@ export function LotusScroll() {
 
   return (
     <div ref={containerRef} style={{ position: "relative" }} className="h-[110vh] lg:h-[140vh]">
-      <div className="sticky top-0 h-screen overflow-hidden bg-cream flex items-start lg:items-center justify-center pt-[12vh] lg:pt-0">
+      <div className="sticky top-0 h-screen overflow-hidden bg-cream flex items-start lg:items-center justify-center pt-[20vh] lg:pt-0">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="w-[500px] h-[500px] rounded-full bg-sage-muted/15 blur-[80px]" />
         </div>
