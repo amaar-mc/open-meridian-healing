@@ -56,16 +56,16 @@ export function Navigation() {
         />
 
         <nav className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="relative flex h-20 items-center justify-center lg:justify-between">
-            <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="flex h-20 items-center justify-between gap-3">
+            <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group min-w-0">
               <Image
                 src="/images/logo.png"
                 alt="Open Meridian Healing logo"
-                width={36}
-                height={36}
-                className="transition-transform duration-300 group-hover:scale-110"
+                width={32}
+                height={32}
+                className="shrink-0 transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="font-brand text-base sm:text-lg font-normal text-honey tracking-wide leading-none">
+              <span className="font-brand text-[13px] sm:text-base lg:text-lg font-normal text-honey tracking-wide leading-none truncate">
                 Open Meridian Healing
               </span>
             </Link>
@@ -92,7 +92,7 @@ export function Navigation() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden absolute right-0 p-2 text-bark"
+              className="lg:hidden shrink-0 p-2 text-bark"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
