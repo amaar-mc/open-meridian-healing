@@ -47,7 +47,7 @@ export function VideoHero() {
   }
 
   return (
-    <section ref={sectionRef} className="relative lg:min-h-screen overflow-hidden bg-cream pt-24 pb-8 lg:pt-0 lg:pb-0">
+    <section ref={sectionRef} className="relative lg:min-h-screen overflow-hidden bg-cream pt-24 pb-0 lg:pt-0 lg:pb-0">
       {/* Warm gradient base */}
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-linen to-blush" />
 
