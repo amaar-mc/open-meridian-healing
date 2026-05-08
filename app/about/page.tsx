@@ -30,12 +30,12 @@ export default function AboutPage() {
               charDelay={0.018}
             />
             <BlurWords
-              text="At Open Meridian Healing, Reiki is offered as a supportive and collaborative practice. Each session is held as a sacred, safe and intentional space, gently supporting healing in alignment with your own inner wisdom."
+              text="At Open Meridian Healing, Reiki is offered as a collaborative and supportive practice. Each session is held with care and intention, creating a grounded space that supports healing in alignment with your inner wisdom."
               className="mt-8 text-bark-light/60 text-lg leading-relaxed max-w-2xl mx-auto"
               delay={0.5}
               wordDelay={0.05}
             />
-            <p className="mt-6 font-heading text-2xl italic text-sage-light/80">
+            <p className="mt-6 font-heading text-2xl italic text-[#3F5A3F]">
               &ldquo;Reiki supports what is ready to unfold.&rdquo;
             </p>
           </ScrollReveal>
@@ -43,19 +43,19 @@ export default function AboutPage() {
       </section>
 
       {/* How Reiki Is Experienced */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-10 lg:py-14 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal variant="slideLeft">
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/5]">
+              <div className="relative rounded-3xl overflow-hidden aspect-[3/2] max-w-md mx-auto shadow-xl shadow-bark/10">
                 <Image
                   src="/images/hands-healing.jpg"
-                  alt="Healing hands during a Reiki session"
+                  alt="Sunset over ocean with warm golden light"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 400px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-bark/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-bark/20 to-transparent" />
               </div>
             </ScrollReveal>
 
@@ -92,7 +92,7 @@ export default function AboutPage() {
       </section>
 
       {/* About Open Meridian Healing */}
-      <section className="py-24 lg:py-32 bg-warm-white">
+      <section className="py-10 lg:py-14 bg-warm-white">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <ScrollReveal>
             <Divider className="mb-8" />
@@ -122,14 +122,14 @@ export default function AboutPage() {
       </section>
 
       {/* Practitioner Bio */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-10 lg:py-14 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
             <ScrollReveal variant="slideLeft" className="lg:col-span-2">
               <div className="sticky top-32">
                 <div className="relative rounded-3xl overflow-hidden aspect-[3/4]">
                   <Image
-                    src="/images/practitioner.png"
+                    src="/images/practitioner-new.jpg"
                     alt="Founder of Open Meridian Healing"
                     fill
                     className="object-cover object-top"
@@ -150,6 +150,10 @@ export default function AboutPage() {
                 Open Meridian Healing
               </h2>
 
+              <p className="text-earth/70 leading-relaxed mb-6 font-heading text-xl italic text-bark/70">
+                At Open Meridian Healing, Reiki is offered through love, intuition, wisdom, and universal intelligence.
+              </p>
+
               <div className="space-y-5 text-earth/70 leading-relaxed">
                 <p>
                   Reiki is not just a practice I offer. It is a calling I feel deeply drawn to make in the world.
@@ -158,18 +162,18 @@ export default function AboutPage() {
                   My journey began in 2020, when I recognized how deeply past trauma was affecting my emotional responses, my physical health, and the way I moved through life. Reactive, overwhelmed, and living in a constant state of fight-or-flight, I knew something needed to change.
                 </p>
                 <p>
-                  Through energy healing, I learned to ground myself and regulate my nervous system. Since beginning this work, I have lost over 62 pounds and feel more balanced and healthier than I ever have. It was during this process that I discovered Reiki and experienced firsthand its power.
+                  Through energy healing, I learned to ground myself and regulate my nervous system. It was during this process that I discovered Reiki and experienced firsthand its power.
                 </p>
                 <p>
                   Healing is not one-size-fits-all. My intention is to make this work accessible and personal, honoring wherever you are in your journey.
                 </p>
+                <p>
+                  My mission is not only to share the healing practice of energy healing, but to support greater compassion, connection, and openness within ourselves and with one another.
+                </p>
               </div>
 
               <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4">
-                <Button href="/book#discovery">Book a Discovery Call</Button>
-                <Button href="/book" variant="outline" small>
-                  Returning Clients: Schedule
-                </Button>
+                <Button href="/book#discovery">Book your Discovery Call</Button>
               </div>
             </ScrollReveal>
           </div>

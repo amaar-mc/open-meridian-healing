@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
@@ -25,10 +26,16 @@ export function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-5">
-            <Link href="/" className="inline-block mb-6">
-              <span className="font-heading text-3xl font-light text-bark tracking-wide">
-                Open Meridian
-                <span className="text-sage"> ✦</span>
+            <Link href="/" className="inline-flex items-center gap-3 mb-6">
+              <Image
+                src="/images/logo.png"
+                alt="Open Meridian Healing logo"
+                width={56}
+                height={56}
+                className="w-14 h-14"
+              />
+              <span className="font-brand text-2xl font-normal text-honey tracking-wide">
+                Open Meridian Healing
               </span>
             </Link>
             <p className="text-bark-light/60 leading-relaxed max-w-sm mb-8">
@@ -109,7 +116,7 @@ export function Footer() {
             href="/book#discovery"
             className="text-xs font-medium text-terracotta hover:text-terracotta-light transition-colors"
           >
-            Book a Discovery Call →
+            Book your Discovery Call →
           </Link>
         </div>
       </div>

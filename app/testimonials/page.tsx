@@ -18,6 +18,16 @@ const TESTIMONIALS = [
       "Overall, Manu creates a truly special and healing experience. I'm so grateful and would highly recommend her to anyone looking to relax, release, and reconnect.",
     ],
   },
+  {
+    name: "Rummy K.",
+    location: "Verified Client",
+    services: ["In-Person Reiki"],
+    quote: [
+      "I had the pleasure of receiving a Reiki session with Manu. It was an exceptionally positive experience. I found her to be very personable, grounded and calming. She took her time in explaining what she was going to do and what I may experience after the session. I found the ambience of the setting to be serene and peaceful.",
+      "During the session I found myself in a calm and meditative state through her guidance. I was highly impressed that when she worked on my body she intuitively was able to zone into the exact areas where I was feeling pain.",
+      "I left the session feeling lighter and deeply relaxed and looking forward to another session with her.",
+    ],
+  },
 ];
 
 function StarRow() {
@@ -58,7 +68,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Testimonial cards */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <StaggerContainer className="space-y-12" stagger={0.15}>
             {TESTIMONIALS.map((t) => (
@@ -128,10 +138,7 @@ export default function TestimonialsPage() {
               New clients begin with a complimentary 15-minute discovery call.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/book#discovery">Book a Discovery Call</Button>
-              <Button href="/book" variant="outline" small>
-                Returning Clients: Schedule
-              </Button>
+              <Button href="/book#discovery">Book your Discovery Call</Button>
             </div>
           </ScrollReveal>
         </div>

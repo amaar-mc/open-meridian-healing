@@ -82,10 +82,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <ScrollReveal>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button href="/book#discovery">Book a Discovery Call</Button>
-              <Button href="/book" variant="outline" small>
-                Returning Clients: Schedule
-              </Button>
+              <Button href="/book#discovery">Book your Discovery Call</Button>
               <Button href="/contact#form" variant="secondary" small>
                 In-Home Service Inquiry
               </Button>
@@ -151,7 +148,7 @@ export default function ContactPage() {
                     If you&apos;re a new client and would like to schedule, you&apos;re welcome to begin here:
                   </p>
                   <div className="mt-6">
-                    <Button href="/book#discovery">Book a Discovery Call</Button>
+                    <Button href="/book#discovery">Book your Discovery Call</Button>
                   </div>
                 </div>
               ) : (

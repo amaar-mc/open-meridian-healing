@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   ScrollReveal,
   StaggerContainer,
@@ -20,47 +21,56 @@ import {
   Brain,
   Sparkles,
   Sun,
+  Star,
 } from "lucide-react";
 
 const SUPPORT_AREAS = [
   {
     icon: <Heart size={22} />,
     title: "Physical",
+    description:
+      "When the body has space to rest, it can begin to regulate and restore. Reiki supports deep relaxation, helping ease tension and encourage natural balance.",
     items: [
       "Renewed energy and vitality",
-      "Release of physical tension",
-      "Greater ease and comfort",
-      "Natural resilience support",
+      "Release of physical tension and pain",
+      "Greater ease and comfort in the body",
+      "Support for overall balance and resilience",
     ],
   },
   {
     icon: <Flower2 size={22} />,
     title: "Emotional",
+    description:
+      "Emotional experiences are often held within the body and energy field. Reiki offers a calm, non-judgmental space for emotions to be felt and gently processed.",
     items: [
-      "Reducing stress and overwhelm",
+      "Reducing stress and emotional overwhelm",
       "Regulating anxiety",
-      "Navigating grief and transitions",
+      "Navigating grief and life transitions",
       "Greater emotional balance",
     ],
   },
   {
     icon: <Brain size={22} />,
     title: "Mental",
+    description:
+      "A constantly active mind can make it difficult to feel present or clear. Reiki supports mental clarity by helping the nervous system slow down, creating space for awareness and insight.",
     items: [
       "Quieter, spacious mental state",
       "Improved focus and clarity",
       "Awareness of thought patterns",
-      "Shifting self-critical loops",
+      "Shifting self-critical or limiting loops",
     ],
   },
   {
     icon: <Sparkles size={22} />,
     title: "Spiritual",
+    description:
+      "For those who experience Reiki as a spiritual practice, it supports connection to inner awareness and intuition—honoring each person's individual path.",
     items: [
-      "Strengthened intuition",
-      "Self-compassion cultivation",
-      "Feeling connected and aligned",
-      "Deeper sense of wholeness",
+      "Strengthened intuition and inner guidance",
+      "Greater self-compassion and compassion for others",
+      "Feeling more connected, aligned, and present",
+      "A deeper sense of wholeness and inner balance",
     ],
   },
 ] as const;
@@ -104,9 +114,23 @@ const SERVICES = [
 ] as const;
 
 const STATS = [
-  { value: 62, suffix: " lbs", label: "Lost by founder through energy healing" },
   { value: 5, suffix: "+", label: "Distinct offerings to meet you where you are" },
   { value: 15, suffix: " min", label: "Complimentary discovery call to begin" },
+] as const;
+
+const TESTIMONIAL_TEASERS = [
+  {
+    name: "Amanda Fullmer",
+    services: "In-Person Reiki · Chakra Mat · Henna",
+    excerpt:
+      "From the moment you walk in, you're welcomed into a calm, serene space… I felt intense sensations that led to a powerful emotional release. Manu creates a truly special and healing experience.",
+  },
+  {
+    name: "Rummy K.",
+    services: "In-Person Reiki",
+    excerpt:
+      "An exceptionally positive experience. I found her to be very personable, grounded and calming… She intuitively was able to zone into the exact areas where I was feeling pain. I left feeling lighter and deeply relaxed.",
+  },
 ] as const;
 
 export function HomeContent() {
@@ -116,9 +140,9 @@ export function HomeContent() {
       <LotusScroll />
 
       {/* What is Reiki */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-10 lg:py-14 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal variant="slideLeft">
               <div className="relative">
                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl shadow-bark/8">
@@ -148,9 +172,14 @@ export function HomeContent() {
               />
               <div className="space-y-5 text-earth/70 leading-relaxed">
                 <BlurWords
-                  text="Reiki is a gentle practice that works with universal life force energy through light touch or hands held above the body. It helps the nervous system settle and supports the body's return to balance."
+                  text="When stress, emotions, or life experiences build up, the body can hold that tension—leaving you feeling heavy, unsettled, or out of balance. Open Meridian Healing offers Reiki as a grounded, heart-centered practice supporting a return to clarity, calm, and wholeness."
                   delay={0.3}
                   wordDelay={0.04}
+                />
+                <BlurWords
+                  text="Reiki is a complementary wellness practice that works with universal life force energy. It is offered through light touch or hands held just above the body. Reiki invites the nervous system to settle, supports energetic flow through the body and its meridians, and helps the mind and body return to a more coherent state of balance."
+                  delay={0.5}
+                  wordDelay={0.03}
                 />
               </div>
               <BlurReveal delay={0.9} className="mt-8">
@@ -162,9 +191,9 @@ export function HomeContent() {
       </section>
 
       {/* Stats — animated numbers */}
-      <section className="py-16 bg-linen/50">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-4 divide-x divide-sage/15">
+      <section className="py-6 bg-linen/50">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="grid grid-cols-2 gap-4 divide-x divide-sage/15">
             {STATS.map((stat, i) => (
               <BlurReveal key={stat.label} delay={i * 0.15} className="text-center px-2 sm:px-4">
                 <p className="font-heading text-2xl sm:text-4xl md:text-5xl text-bark font-light">
@@ -180,16 +209,16 @@ export function HomeContent() {
       </section>
 
       {/* Divider */}
-      <div className="flex items-center justify-center py-10 bg-cream">
+      <div className="flex items-center justify-center py-3 bg-cream">
         <div className="h-px w-24 bg-sage/20" />
         <span className="mx-4 text-sage/40 text-xl">✦</span>
         <div className="h-px w-24 bg-sage/20" />
       </div>
 
       {/* How Reiki Supports You */}
-      <section className="py-16 lg:py-20 bg-gradient-to-b from-cream to-warm-white">
+      <section className="py-8 lg:py-12 bg-gradient-to-b from-cream to-warm-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <BlurReveal delay={0.1}>
               <p className="text-terracotta text-xs font-semibold tracking-[0.22em] uppercase mb-3">
                 Holistic Wellness
@@ -201,19 +230,28 @@ export function HomeContent() {
               delay={0.2}
               charDelay={0.02}
             />
+            <BlurWords
+              text="Reiki is a gentle, supportive practice that helps the body and mind settle into a more balanced, regulated state—guided by your own inner wisdom. Each experience is unique, with support across physical, emotional, mental, and spiritual well-being."
+              className="mt-4 text-earth/60 max-w-2xl mx-auto leading-relaxed"
+              delay={0.4}
+              wordDelay={0.03}
+            />
           </div>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5" stagger={0.1}>
             {SUPPORT_AREAS.map((area) => (
               <StaggerItem key={area.title}>
-                <div className="group rounded-2xl bg-white/60 backdrop-blur-sm border border-sage/10 p-5 lg:p-6 hover:shadow-lg hover:shadow-sage/5 transition-all duration-500 h-full">
+                <div className="group rounded-2xl bg-white/60 backdrop-blur-sm border border-sage/10 p-5 lg:p-6 hover:shadow-lg hover:shadow-sage/5 transition-all duration-500 h-full flex flex-col">
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-sage/10 text-sage mb-4 group-hover:bg-sage group-hover:text-white transition-all duration-300">
                     {area.icon}
                   </div>
-                  <h3 className="font-heading text-lg font-medium text-bark mb-3">
+                  <h3 className="font-heading text-lg font-medium text-bark mb-2">
                     {area.title}
                   </h3>
-                  <ul className="space-y-1.5">
+                  <p className="text-xs text-earth/60 leading-relaxed mb-4">
+                    {area.description}
+                  </p>
+                  <ul className="space-y-1.5 mt-auto pt-2 border-t border-sage/10">
                     {area.items.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-xs text-earth/70">
                         <Sun size={11} className="text-honey mt-0.5 shrink-0" />
@@ -229,7 +267,7 @@ export function HomeContent() {
       </section>
 
       {/* Services */}
-      <section className="py-24 lg:py-32 bg-warm-white">
+      <section className="py-10 lg:py-14 bg-warm-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <BlurReveal delay={0.1}>
@@ -270,14 +308,69 @@ export function HomeContent() {
         </div>
       </section>
 
-      <div className="flex items-center justify-center py-10 bg-warm-white">
+      {/* Testimonials teaser */}
+      <section className="py-10 lg:py-14 bg-cream">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <BlurReveal delay={0.1}>
+              <p className="text-terracotta text-xs font-semibold tracking-[0.22em] uppercase mb-3">
+                Client Experiences
+              </p>
+            </BlurReveal>
+            <BlurText
+              text="What Clients Are Saying"
+              className="font-heading text-3xl md:text-4xl font-light text-bark leading-tight block"
+              delay={0.2}
+              charDelay={0.022}
+            />
+          </div>
+
+          <StaggerContainer className="space-y-6" stagger={0.15}>
+            {TESTIMONIAL_TEASERS.map((t) => (
+              <StaggerItem key={t.name}>
+                <Link
+                  href="/testimonials"
+                  className="group block rounded-3xl bg-white/70 border border-sage/12 shadow-md shadow-bark/5 p-7 lg:p-9 transition-all duration-500 hover:shadow-xl hover:shadow-bark/8 hover:-translate-y-1 hover:border-sage/25"
+                >
+                  <div className="flex items-center gap-1 mb-4">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} size={14} className="fill-honey text-honey" />
+                    ))}
+                  </div>
+                  <p className="font-heading text-lg md:text-xl text-bark/80 leading-relaxed italic mb-5">
+                    &ldquo;{t.excerpt}&rdquo;
+                  </p>
+                  <div className="flex items-center justify-between gap-4 pt-4 border-t border-sage/10">
+                    <div>
+                      <p className="font-medium text-bark text-sm">{t.name}</p>
+                      <p className="text-xs text-earth/50 mt-0.5">{t.services}</p>
+                    </div>
+                    <span className="text-sm font-medium text-terracotta group-hover:gap-3 inline-flex items-center gap-2 transition-all">
+                      Read full
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    </span>
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <BlurReveal delay={0.4} className="mt-10 text-center">
+            <Button href="/testimonials" variant="secondary">
+              See All Testimonials →
+            </Button>
+          </BlurReveal>
+        </div>
+      </section>
+
+      <div className="flex items-center justify-center py-3 bg-cream">
         <div className="h-px w-24 bg-sage/20" />
         <span className="mx-4 text-sage/40 text-xl">✦</span>
         <div className="h-px w-24 bg-sage/20" />
       </div>
 
       {/* Invitation / CTA — dark section */}
-      <section className="relative py-28 lg:py-36 overflow-hidden">
+      <section className="relative py-14 lg:py-18 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,#2A1F18_0%,#1A1512_70%,#0F0C0A_100%)]" />
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-sage blur-3xl" />
@@ -304,15 +397,7 @@ export function HomeContent() {
 
           <BlurReveal delay={1.1} className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button href="/book#discovery">
-              Book a Discovery Call
-            </Button>
-            <Button
-              href="/book"
-              variant="outline"
-              className="border-cream/30 text-cream hover:bg-cream/10 hover:text-cream hover:border-cream/50"
-              small
-            >
-              Returning Clients: Schedule a Session
+              Book your Discovery Call
             </Button>
           </BlurReveal>
           <BlurReveal delay={1.3}>

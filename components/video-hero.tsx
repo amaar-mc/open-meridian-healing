@@ -47,7 +47,7 @@ export function VideoHero() {
   }
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen overflow-hidden bg-cream">
+    <section ref={sectionRef} className="relative lg:min-h-screen overflow-hidden bg-cream pt-24 pb-8 lg:pt-0 lg:pb-0">
       {/* Warm gradient base */}
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-linen to-blush" />
 
@@ -55,21 +55,28 @@ export function VideoHero() {
       <div className="absolute top-[10%] right-[5%] w-[500px] h-[500px] rounded-full bg-sage-muted/20 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[15%] left-[5%] w-[400px] h-[400px] rounded-full bg-terracotta/8 blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full py-16 lg:py-0">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full lg:min-h-screen flex items-center">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-16 items-center w-full lg:py-0">
 
           {/* Text side */}
           <div className="lg:col-span-7 order-1 text-center lg:text-left">
 
-            {/* Eyebrow */}
+            {/* Brand mark — logo always; wordmark desktop-only (nav already shows it on mobile) */}
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex items-center justify-center lg:justify-start gap-3 mb-8"
+              className="flex flex-col items-center lg:items-start gap-2 mb-8"
             >
-              <Image src="/images/logo.png" alt="" width={22} height={22} />
-              <span className="text-terracotta text-xs font-semibold tracking-[0.28em] uppercase">
+              <Image
+                src="/images/logo.png"
+                alt="Open Meridian Healing logo"
+                width={84}
+                height={84}
+                priority
+                className="w-[84px] h-[84px]"
+              />
+              <span className="hidden lg:inline-block font-brand text-xl sm:text-2xl text-honey tracking-wide leading-none">
                 Open Meridian Healing
               </span>
             </motion.div>
@@ -123,7 +130,7 @@ export function VideoHero() {
 
             {/* Subtext — word blur */}
             <div className="mt-8 text-bark-light/70 text-lg leading-relaxed max-w-xl">
-              {"Reiki and intuitive energy healing in a warm, grounded space—inviting calm, heart-centered presence, and a gentle return to wholeness."
+              {"Reiki and intuitive energy healing offered in a warm, grounded, and supportive space—inviting calm, heart-centered presence, and a gentle return to wholeness."
                 .split(" ")
                 .map((word, i) => (
                   <motion.span
@@ -146,10 +153,7 @@ export function VideoHero() {
               className="mt-8 flex flex-col sm:flex-row items-center lg:items-start gap-3"
             >
               <Button href="/book#discovery" variant="primary">
-                Book a Discovery Call
-              </Button>
-              <Button href="/book" variant="outline">
-                Schedule a Session
+                Book your Discovery Call
               </Button>
             </motion.div>
 
