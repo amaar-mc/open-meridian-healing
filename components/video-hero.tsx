@@ -61,15 +61,21 @@ export function VideoHero() {
           {/* Text side */}
           <div className="lg:col-span-7 order-1 text-center lg:text-left">
 
-            {/* Eyebrow */}
+            {/* Brand mark — logo + name (Cinzel gold), business-card style */}
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex items-center justify-center lg:justify-start gap-3 mb-8"
+              className="flex flex-col items-center lg:items-start gap-2 mb-8"
             >
-              <Image src="/images/logo.png" alt="" width={22} height={22} />
-              <span className="text-terracotta text-xs font-semibold tracking-[0.28em] uppercase">
+              <Image
+                src="/images/logo.png"
+                alt="Open Meridian Healing logo"
+                width={84}
+                height={84}
+                priority
+              />
+              <span className="font-brand text-xl sm:text-2xl text-honey tracking-wide leading-none">
                 Open Meridian Healing
               </span>
             </motion.div>
