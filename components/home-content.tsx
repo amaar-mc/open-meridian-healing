@@ -26,41 +26,49 @@ const SUPPORT_AREAS = [
   {
     icon: <Heart size={22} />,
     title: "Physical",
+    description:
+      "When the body has space to rest, it can begin to regulate and restore. Reiki supports deep relaxation, helping ease tension and encourage natural balance.",
     items: [
       "Renewed energy and vitality",
-      "Release of physical tension",
-      "Greater ease and comfort",
-      "Natural resilience support",
+      "Release of physical tension and pain",
+      "Greater ease and comfort in the body",
+      "Support for overall balance and resilience",
     ],
   },
   {
     icon: <Flower2 size={22} />,
     title: "Emotional",
+    description:
+      "Emotional experiences are often held within the body and energy field. Reiki offers a calm, non-judgmental space for emotions to be felt and gently processed.",
     items: [
-      "Reducing stress and overwhelm",
+      "Reducing stress and emotional overwhelm",
       "Regulating anxiety",
-      "Navigating grief and transitions",
+      "Navigating grief and life transitions",
       "Greater emotional balance",
     ],
   },
   {
     icon: <Brain size={22} />,
     title: "Mental",
+    description:
+      "A constantly active mind can make it difficult to feel present or clear. Reiki supports mental clarity by helping the nervous system slow down, creating space for awareness and insight.",
     items: [
       "Quieter, spacious mental state",
       "Improved focus and clarity",
       "Awareness of thought patterns",
-      "Shifting self-critical loops",
+      "Shifting self-critical or limiting loops",
     ],
   },
   {
     icon: <Sparkles size={22} />,
     title: "Spiritual",
+    description:
+      "For those who experience Reiki as a spiritual practice, it supports connection to inner awareness and intuition—honoring each person's individual path.",
     items: [
-      "Strengthened intuition",
-      "Self-compassion cultivation",
-      "Feeling connected and aligned",
-      "Deeper sense of wholeness",
+      "Strengthened intuition and inner guidance",
+      "Greater self-compassion and compassion for others",
+      "Feeling more connected, aligned, and present",
+      "A deeper sense of wholeness and inner balance",
     ],
   },
 ] as const;
@@ -216,14 +224,17 @@ export function HomeContent() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5" stagger={0.1}>
             {SUPPORT_AREAS.map((area) => (
               <StaggerItem key={area.title}>
-                <div className="group rounded-2xl bg-white/60 backdrop-blur-sm border border-sage/10 p-5 lg:p-6 hover:shadow-lg hover:shadow-sage/5 transition-all duration-500 h-full">
+                <div className="group rounded-2xl bg-white/60 backdrop-blur-sm border border-sage/10 p-5 lg:p-6 hover:shadow-lg hover:shadow-sage/5 transition-all duration-500 h-full flex flex-col">
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-sage/10 text-sage mb-4 group-hover:bg-sage group-hover:text-white transition-all duration-300">
                     {area.icon}
                   </div>
-                  <h3 className="font-heading text-lg font-medium text-bark mb-3">
+                  <h3 className="font-heading text-lg font-medium text-bark mb-2">
                     {area.title}
                   </h3>
-                  <ul className="space-y-1.5">
+                  <p className="text-xs text-earth/60 leading-relaxed mb-4">
+                    {area.description}
+                  </p>
+                  <ul className="space-y-1.5 mt-auto pt-2 border-t border-sage/10">
                     {area.items.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-xs text-earth/70">
                         <Sun size={11} className="text-honey mt-0.5 shrink-0" />
