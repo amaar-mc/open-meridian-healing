@@ -56,7 +56,7 @@ export function Navigation() {
         />
 
         <nav className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex h-20 items-center justify-between">
+          <div className="relative flex h-20 items-center justify-center lg:justify-between">
             <Link href="/" className="flex items-center gap-2.5 group">
               <Image
                 src="/images/logo.png"
@@ -65,7 +65,7 @@ export function Navigation() {
                 height={36}
                 className="transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="font-brand text-lg font-normal text-honey tracking-wide">
+              <span className="font-brand text-base sm:text-lg font-normal text-honey tracking-wide leading-none">
                 Open Meridian Healing
               </span>
             </Link>
@@ -92,7 +92,7 @@ export function Navigation() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-bark"
+              className="lg:hidden absolute right-0 p-2 text-bark"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
