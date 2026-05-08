@@ -140,7 +140,7 @@ export function HomeContent() {
       <LotusScroll />
 
       {/* What is Reiki */}
-      <section className="py-16 lg:py-20 bg-cream">
+      <section className="py-10 lg:py-14 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal variant="slideLeft">
@@ -191,7 +191,7 @@ export function HomeContent() {
       </section>
 
       {/* Stats — animated numbers */}
-      <section className="py-10 bg-linen/50">
+      <section className="py-6 bg-linen/50">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-4 divide-x divide-sage/15">
             {STATS.map((stat, i) => (
@@ -209,14 +209,14 @@ export function HomeContent() {
       </section>
 
       {/* Divider */}
-      <div className="flex items-center justify-center py-6 bg-cream">
+      <div className="flex items-center justify-center py-3 bg-cream">
         <div className="h-px w-24 bg-sage/20" />
         <span className="mx-4 text-sage/40 text-xl">✦</span>
         <div className="h-px w-24 bg-sage/20" />
       </div>
 
       {/* How Reiki Supports You */}
-      <section className="py-12 lg:py-16 bg-gradient-to-b from-cream to-warm-white">
+      <section className="py-8 lg:py-12 bg-gradient-to-b from-cream to-warm-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-8">
             <BlurReveal delay={0.1}>
@@ -267,7 +267,7 @@ export function HomeContent() {
       </section>
 
       {/* Services */}
-      <section className="py-16 lg:py-20 bg-warm-white">
+      <section className="py-10 lg:py-14 bg-warm-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <BlurReveal delay={0.1}>
@@ -309,7 +309,7 @@ export function HomeContent() {
       </section>
 
       {/* Testimonials teaser */}
-      <section className="py-16 lg:py-20 bg-cream">
+      <section className="py-10 lg:py-14 bg-cream">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="text-center mb-10">
             <BlurReveal delay={0.1}>
@@ -363,14 +363,14 @@ export function HomeContent() {
         </div>
       </section>
 
-      <div className="flex items-center justify-center py-6 bg-cream">
+      <div className="flex items-center justify-center py-3 bg-cream">
         <div className="h-px w-24 bg-sage/20" />
         <span className="mx-4 text-sage/40 text-xl">✦</span>
         <div className="h-px w-24 bg-sage/20" />
       </div>
 
       {/* Invitation / CTA — dark section */}
-      <section className="relative py-20 lg:py-24 overflow-hidden">
+      <section className="relative py-14 lg:py-18 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,#2A1F18_0%,#1A1512_70%,#0F0C0A_100%)]" />
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-sage blur-3xl" />
