@@ -128,7 +128,7 @@ export default function ServicesPage() {
       </section>
 
       {/* In-Person Reiki */}
-      <section id="in-person" className="py-16 lg:py-20 bg-cream scroll-mt-24">
+      <section id="in-person" className="py-10 lg:py-14 bg-cream scroll-mt-24">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -188,7 +188,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Rainbow Chakra Mat */}
-      <section id="chakra-mat" className="py-16 lg:py-20 bg-warm-white scroll-mt-24">
+      <section id="chakra-mat" className="py-10 lg:py-14 bg-warm-white scroll-mt-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
@@ -243,7 +243,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Distance Reiki */}
-      <section id="distance" className="py-16 lg:py-20 bg-cream scroll-mt-24">
+      <section id="distance" className="py-10 lg:py-14 bg-cream scroll-mt-24">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-4 py-2 text-sage text-sm font-medium mb-6">
@@ -293,7 +293,7 @@ export default function ServicesPage() {
       </section>
 
       {/* In-Home Reiki */}
-      <section id="in-home" className="py-16 lg:py-20 bg-warm-white scroll-mt-24">
+      <section id="in-home" className="py-10 lg:py-14 bg-warm-white scroll-mt-24">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-10">
@@ -331,7 +331,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Reiki Henna */}
-      <section id="henna" className="py-16 lg:py-20 bg-cream scroll-mt-24">
+      <section id="henna" className="py-10 lg:py-14 bg-cream scroll-mt-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ScrollReveal>
             <SectionHeading
