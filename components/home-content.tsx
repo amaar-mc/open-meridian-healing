@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   ScrollReveal,
   StaggerContainer,
@@ -20,6 +21,7 @@ import {
   Brain,
   Sparkles,
   Sun,
+  Star,
 } from "lucide-react";
 
 const SUPPORT_AREAS = [
@@ -114,6 +116,21 @@ const SERVICES = [
 const STATS = [
   { value: 5, suffix: "+", label: "Distinct offerings to meet you where you are" },
   { value: 15, suffix: " min", label: "Complimentary discovery call to begin" },
+] as const;
+
+const TESTIMONIAL_TEASERS = [
+  {
+    name: "Amanda Fullmer",
+    services: "In-Person Reiki · Chakra Mat · Henna",
+    excerpt:
+      "From the moment you walk in, you're welcomed into a calm, serene space… I felt intense sensations that led to a powerful emotional release. Manu creates a truly special and healing experience.",
+  },
+  {
+    name: "Rummy K.",
+    services: "In-Person Reiki",
+    excerpt:
+      "An exceptionally positive experience. I found her to be very personable, grounded and calming… She intuitively was able to zone into the exact areas where I was feeling pain. I left feeling lighter and deeply relaxed.",
+  },
 ] as const;
 
 export function HomeContent() {
@@ -291,7 +308,62 @@ export function HomeContent() {
         </div>
       </section>
 
-      <div className="flex items-center justify-center py-6 bg-warm-white">
+      {/* Testimonials teaser */}
+      <section className="py-16 lg:py-20 bg-cream">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <BlurReveal delay={0.1}>
+              <p className="text-terracotta text-xs font-semibold tracking-[0.22em] uppercase mb-3">
+                Client Experiences
+              </p>
+            </BlurReveal>
+            <BlurText
+              text="What Clients Are Saying"
+              className="font-heading text-3xl md:text-4xl font-light text-bark leading-tight block"
+              delay={0.2}
+              charDelay={0.022}
+            />
+          </div>
+
+          <StaggerContainer className="space-y-6" stagger={0.15}>
+            {TESTIMONIAL_TEASERS.map((t) => (
+              <StaggerItem key={t.name}>
+                <Link
+                  href="/testimonials"
+                  className="group block rounded-3xl bg-white/70 border border-sage/12 shadow-md shadow-bark/5 p-7 lg:p-9 transition-all duration-500 hover:shadow-xl hover:shadow-bark/8 hover:-translate-y-1 hover:border-sage/25"
+                >
+                  <div className="flex items-center gap-1 mb-4">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} size={14} className="fill-honey text-honey" />
+                    ))}
+                  </div>
+                  <p className="font-heading text-lg md:text-xl text-bark/80 leading-relaxed italic mb-5">
+                    &ldquo;{t.excerpt}&rdquo;
+                  </p>
+                  <div className="flex items-center justify-between gap-4 pt-4 border-t border-sage/10">
+                    <div>
+                      <p className="font-medium text-bark text-sm">{t.name}</p>
+                      <p className="text-xs text-earth/50 mt-0.5">{t.services}</p>
+                    </div>
+                    <span className="text-sm font-medium text-terracotta group-hover:gap-3 inline-flex items-center gap-2 transition-all">
+                      Read full
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    </span>
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <BlurReveal delay={0.4} className="mt-10 text-center">
+            <Button href="/testimonials" variant="secondary">
+              See All Testimonials →
+            </Button>
+          </BlurReveal>
+        </div>
+      </section>
+
+      <div className="flex items-center justify-center py-6 bg-cream">
         <div className="h-px w-24 bg-sage/20" />
         <span className="mx-4 text-sage/40 text-xl">✦</span>
         <div className="h-px w-24 bg-sage/20" />
