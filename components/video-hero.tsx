@@ -47,7 +47,7 @@ export function VideoHero() {
   }
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen overflow-hidden bg-cream">
+    <section ref={sectionRef} className="relative lg:min-h-screen overflow-hidden bg-cream pt-24 pb-8 lg:pt-0 lg:pb-0">
       {/* Warm gradient base */}
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-linen to-blush" />
 
@@ -55,8 +55,8 @@ export function VideoHero() {
       <div className="absolute top-[10%] right-[5%] w-[500px] h-[500px] rounded-full bg-sage-muted/20 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[15%] left-[5%] w-[400px] h-[400px] rounded-full bg-terracotta/8 blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full py-16 lg:py-0">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full lg:min-h-screen flex items-center">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-16 items-center w-full lg:py-0">
 
           {/* Text side */}
           <div className="lg:col-span-7 order-1 text-center lg:text-left">
