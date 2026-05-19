@@ -105,7 +105,7 @@ const SERVICES = [
     icon: <Gem size={24} />,
   },
   {
-    title: "Reiki Henna Tattooing",
+    title: "Reiki Infused Sacred Henna Tattooing",
     description:
       "Temporary plant-based body art infused with Reiki energy. Choose simple infused henna or a ceremonial experience.",
     href: "/services#henna",
