@@ -61,22 +61,22 @@ export function VideoHero() {
           {/* Text side */}
           <div className="lg:col-span-7 order-1 text-center lg:text-left">
 
-            {/* Brand mark — logo always; wordmark desktop-only (nav already shows it on mobile) */}
+            {/* Brand mark — logo centered above name (matches business card / flyers) */}
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col items-center lg:items-start gap-2 mb-8"
+              className="flex flex-col items-center gap-3 mb-8 lg:mb-10 mx-auto lg:mx-0 lg:items-center w-fit"
             >
               <Image
                 src="/images/logo.png"
                 alt="Open Meridian Healing logo"
-                width={84}
-                height={84}
+                width={120}
+                height={120}
                 priority
-                className="w-[84px] h-[84px]"
+                className="w-[96px] h-[96px] lg:w-[120px] lg:h-[120px]"
               />
-              <span className="hidden lg:inline-block font-brand text-xl sm:text-2xl text-honey tracking-wide leading-none">
+              <span className="hidden lg:inline-block font-brand text-2xl lg:text-3xl text-honey tracking-wide leading-none text-center">
                 Open Meridian Healing
               </span>
             </motion.div>
