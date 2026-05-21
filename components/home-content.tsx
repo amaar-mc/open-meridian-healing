@@ -105,7 +105,7 @@ const SERVICES = [
     icon: <Gem size={24} />,
   },
   {
-    title: "Reiki Henna Tattooing",
+    title: "Reiki Infused Sacred Henna Tattooing",
     description:
       "Temporary plant-based body art infused with Reiki energy. Choose simple infused henna or a ceremonial experience.",
     href: "/services#henna",
@@ -248,14 +248,14 @@ export function HomeContent() {
                   <h3 className="font-heading text-lg font-medium text-bark mb-2">
                     {area.title}
                   </h3>
-                  <p className="text-xs text-earth/60 leading-relaxed mb-4">
+                  <p className="text-xs text-earth/60 leading-relaxed mb-4 lg:min-h-[7.5rem]">
                     {area.description}
                   </p>
-                  <ul className="space-y-1.5 mt-auto pt-2 border-t border-sage/10">
+                  <ul className="space-y-1.5 pt-3 border-t border-sage/10">
                     {area.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-xs text-earth/70">
+                      <li key={item} className="flex items-start gap-2 text-xs text-earth/70 leading-relaxed">
                         <Sun size={11} className="text-honey mt-0.5 shrink-0" />
-                        {item}
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>

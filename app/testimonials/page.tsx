@@ -28,6 +28,25 @@ const TESTIMONIALS = [
       "I left the session feeling lighter and deeply relaxed and looking forward to another session with her.",
     ],
   },
+  {
+    name: "Nicole Sohal",
+    location: "Verified Client",
+    services: ["In-Person Reiki", "Rainbow Chakra Mat"],
+    quote: [
+      "I had my first Reiki experience with Manu and I'm so impressed! She went above and beyond to ensure I was prepared, hydrated, and comfortable. Her space is cozy and pristine, featuring a stunning rainbow chakra mat that adds such great elemental energy.",
+      "She explained the process perfectly and helped me guide my session by ensuring that I came with a clear intention in mind. For me the results were immediate — I felt so much more balanced and had the best deep sleep that night.",
+      "I truly feel lighter and more refreshed. Such a professional and soothing presence. I can't recommend her enough as I walked away completely enlightened.",
+    ],
+  },
+  {
+    name: "Simi Pannu",
+    location: "Verified Client",
+    services: ["In-Person Reiki"],
+    quote: [
+      "I recently experienced Reiki energy healing by Manu, and it was truly an eye-opening experience for me. During the session, I could physically feel the energy in her hands. They became incredibly warm, almost like having a heating pad placed exactly where healing was needed. What amazed me most was that she seemed to know where I was hurting without me ever mentioning it.",
+      "The experience felt calming, comforting, and deeply restorative. It opened my mind to exploring more natural healing practices and the connection between energy, stress, and the body. I am grateful for the experience and would highly recommend it to anyone curious about holistic healing.",
+    ],
+  },
 ];
 
 function StarRow() {

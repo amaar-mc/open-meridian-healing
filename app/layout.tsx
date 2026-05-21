@@ -52,6 +52,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${dmSans.variable} ${cinzelDecorative.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-body">

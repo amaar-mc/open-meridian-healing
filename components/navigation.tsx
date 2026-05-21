@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 
 const NAV_LINKS = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/what-to-expect", label: "What to Expect" },
@@ -45,7 +46,7 @@ export function Navigation() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+          scrolled || mobileOpen
             ? "bg-cream/95 backdrop-blur-md shadow-[0_1px_2px_rgba(58,42,30,0.06)]"
             : "bg-transparent"
         }`}

@@ -336,7 +336,7 @@ export default function ServicesPage() {
           <ScrollReveal>
             <SectionHeading
               eyebrow="Body Art & Energy"
-              title="Reiki Henna Tattooing"
+              title="Reiki Infused Sacred Henna Tattooing"
               subtitle="Temporary plant-based body art infused with Reiki energy, offered as simple infused henna or a ceremonial experience."
             />
           </ScrollReveal>
