@@ -71,12 +71,12 @@ export function VideoHero() {
               <Image
                 src="/images/logo.png"
                 alt="Open Meridian Healing logo"
-                width={120}
-                height={120}
+                width={96}
+                height={96}
                 priority
-                className="w-[96px] h-[96px] lg:w-[120px] lg:h-[120px]"
+                className="w-[88px] h-[88px] lg:w-[88px] lg:h-[88px]"
               />
-              <span className="hidden lg:inline-block font-brand text-2xl lg:text-3xl text-honey tracking-wide leading-none text-center">
+              <span className="font-brand text-xl lg:text-2xl text-honey tracking-wide leading-none text-center">
                 Open Meridian Healing
               </span>
             </motion.div>
